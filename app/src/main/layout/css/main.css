@@ -1,28 +1,32 @@
 
-body{
-    font-family: "Avenir Next";
-    font-family: "Avenir Next", Avenir, "Droid Sans", "DroidSansRegular", Corbel, Tahoma, Geneva, sans-serif;
-    font-weight: 400;
-    width: 100%;
-}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+  }
+  
+
+
 h1{
     font-weight: 300;
     text-align: center;
 }
 
 #content{
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #map{
-    width: 100%;
-    max-width: 1400px;
+    width: 70%;
+    max-width: 1100px;
     height: 600px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 0px;
+    float: right;
+    z-index: 0;
 }
 
 .test {
@@ -30,10 +34,35 @@ h1{
 }
 
 button {
-    background-color: #5c9e8a;
-    padding: 10px;
-    width: 100px;
-    font-size: 16px;
-    border: none;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    border: 10px black;
+    cursor: pointer;
+    width: 100%; 
+    align-content: center;
     border-radius: 5px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    transition: 0.3s;
 }
+
+button:hover {
+    background-color: #818181;
+    color: white;
+  }
+  
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+

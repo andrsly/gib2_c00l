@@ -11,22 +11,113 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
-        <script src="utesteder.js"></script>
+        <script src="js/parkeringshus.js"></script>
 
-
+        <!-- Stylesheets (css) -->
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/login.css" />
+        <link rel="stylesheet" href="css/search.css"/>
+        <link rel="stylesheet" href="css/sidemenu.css"/>
+        <link rel="stylesheet" href="css/register.css"/>
+
     </head>
     <body>
+            <!-- Side menu -->
+            <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                      <a href="#">Oversikt</a>
+                      <a href="#">Kontakt oss</a>
+                      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Logg inn</button>
+                      <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrer deg</button>
+                    </div>
+                  </div>
+              <!-- /Side menu -->
+                  
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Meny</span>
+                       
 
         
 
         <div id="content">
             <h1>Parkeringshus i Trondheim</h1>
-            <button id='bestStudy-btn' onclick="alert('Dra til Dreams<33'); hideButton('bestStudy-btn')"> Anbefaling </button>
-            <button id='bestStudy-btn2' onclick="alert('Heia deg'); hideButton('bestStudy-btn2')"> Heia meg </button>
-            <div id="map">
-            </div>
+
+        <!-- Search -->
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Søk etter parkeringshus" name="search2">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- /Search -->
+           
+          <div id="map"></div>
+
+   
+  <!-- Log in -->
+  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="" alt="" class="">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Epost</b></label>
+      <input type="text" placeholder="Skriv inn epost" name="uname" required>
+
+      <label for="psw"><b>Passord</b></label>
+      <input type="password" placeholder="Skriv inn passord" name="psw" required>
+        
+      <button type="submit" class = "loginbtn">Logg inn</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+<!-- /Log in -->
+
+<!-- Sign up -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Lag bruker</h1>
+      <p>Vennligst fyll ut disse feltene for å lage en bruker</p>
+      <hr>
+      <label for="email"><b>Epost</b></label>
+      <input type="text" placeholder="Skriv inn epost" name="email" required>
+
+      <label for="psw"><b>Passord</b></label>
+      <input type="password" placeholder="Skriv inn passord" name="psw" required>
+
+      <label for="psw-repeat"><b>Gjenta passord</b></label>
+      <input type="password" placeholder="Gjenta passord" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>Ved å registrere deg godtar du våre <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Registrer</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- /Sign up -->
+
+
         </div>
+
+      
 
 
 
@@ -34,6 +125,9 @@
 <!-- -------------------------------------------------------------------------------- -->
 
         <script src="js/main.js"></script>
+        <script src=js/login.js></script>
+        <script src=js/sidemenu.js></script>
+        <script src=js/register.js></script>
     </body>
 </html>
 
