@@ -4,8 +4,11 @@
     box-sizing: border-box;
   }
 
-  .example {
+  .search {
       float: left;
+      left: 0px;
+      right: auto;
+      clear: both;
 
   }
 
@@ -30,7 +33,9 @@
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
+    height: 40px;
   }
+
 
   form.example button:hover {
     background: #0b7dda;

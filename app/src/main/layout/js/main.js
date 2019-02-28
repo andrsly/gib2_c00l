@@ -2,7 +2,7 @@
 function setMap() {
     console.log("Loading map");
   
-    var map = L.map("map").setView([63.43, 10.395], 13.45 );
+    var map = L.map("map").setView([63.43, 10.395], 13.5 );
     //Set view takes two parameters;
     //1. The coordinates for the center of the map
     //2. The zoom level. Zoomlevel is from 0 -> 22, where 22 is zoomed in an 0 is zoomed out

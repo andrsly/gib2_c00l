@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="format-detection" content="telephone=no">
-        <title>Prosjekt</title>
+        <title>TrønderPark</title>
         <meta http-equiv="content-type" content="text/html;charset=UTF-8">
         
         <!-- Dependencies -->
@@ -26,29 +26,44 @@
             <div id="myNav" class="overlay">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="overlay-content">
-                      <a href="#">Oversikt</a>
+                      <a href="nettsiden.html" >Oversikt</a>
                       <a href="#">Kontakt oss</a>
                       <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Logg inn</button>
                       <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrer deg</button>
                     </div>
                   </div>
-              <!-- /Side menu -->
-                  
-                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Meny</span>
-                       
+                               
+              <span style="font-size:30px;cursor:pointer;float: left;" onclick="openNav()">&#9776; Meny</span>
+              <!-- /Side menu -->     
 
         
 
         <div id="content">
             <h1>Parkeringshus i Trondheim</h1>
 
+      <div id="leftside" class = "left">
+
         <!-- Search -->
+        <div id = "search" class = "search">
         <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-            <input type="text" placeholder="Søk etter parkeringshus" name="search2">
+            <h3>Skriv inn adresse for å finne nærmeste parkeringshus</h3 >
+            <input type="text" placeholder="Skriv inn adresse... " name="search2">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
+      </div>
         <!-- /Search -->
-           
+        
+        <!-- Location -->
+        <div id="location" class = "location">
+            <h3>Click the button to get your coordinates</h3>
+            <button action="none" onclick="getLocation()" class = "locationbtn">Try It</button>
+            <p id="demo" class = "left"> </p>
+            </div>
+            <!-- /Location -->
+  
+        
+      </div>
+
           <div id="map"></div>
 
    
@@ -114,10 +129,17 @@
 </div>
 <!-- /Sign up -->
 
+<!-- Footer -->
+<div class="footer">
+   <img class='test' src ="http://parkpunkt.com/wp-content/uploads/2018/06/Download.png-PP.png"> </img>
+  </div>
+<!-- /Footer -->
 
         </div>
 
-      
+        
+            
+            
 
 
 
@@ -128,6 +150,7 @@
         <script src=js/login.js></script>
         <script src=js/sidemenu.js></script>
         <script src=js/register.js></script>
+        <script src=js/location.js></script>
     </body>
 </html>
 
