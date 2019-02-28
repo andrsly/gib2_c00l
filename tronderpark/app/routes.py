@@ -12,3 +12,7 @@ from flask import Flask, jsonify, render_template
 @app.route ('/nettsiden')
 def nettsiden ():
     return render_template('nettsiden.html')
+
+@app.route ('/')
+def home ():
+    return render_template('home.html')
