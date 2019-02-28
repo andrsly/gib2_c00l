@@ -1,10 +1,14 @@
 from app import app
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
-@app.route('/')
-def helloworld():
-    return jsonify(dict(data='Hello World'))
+#@app.route('/')
+#def helloworld():
+#    return jsonify(dict(data='Hello World'))
 
-@app.route('/user/<username>')
-def user(username):
-    return jsonify(dict(user=username))
+#@app.route('/user/<username>')
+#def user(username):
+#    return jsonify(dict(user=username))
+
+@app.route ('/nettsiden')
+def nettsiden ():
+    return render_template('nettsiden.html')
