@@ -9,6 +9,7 @@
       left: 0px;
       right: auto;
       clear: both;
+      align-content: left;
 
   }
 
@@ -20,6 +21,7 @@
     float: left;
     width: 80%;
     background: #f1f1f1;
+
 
   }
 
@@ -43,6 +45,5 @@
   
   form.example::after {
     content: "";
-    clear: both;
     display: table;
   }

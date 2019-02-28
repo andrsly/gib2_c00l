@@ -27,4 +27,15 @@ function setMap() {
   }
 
   
+
+  /*function showPositionMap(la, lo) {
+    var circle = L.circle([la, lo], {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 500
+  }).addTo(map);
+  }*/
+
+  
 window.onload = setMap;
