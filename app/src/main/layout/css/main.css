@@ -1,28 +1,40 @@
 
-body{
-    font-family: "Avenir Next";
-    font-family: "Avenir Next", Avenir, "Droid Sans", "DroidSansRegular", Corbel, Tahoma, Geneva, sans-serif;
-    font-weight: 400;
-    width: 100%;
-}
+
+
+body {
+    font-family: 'Lato', Courier;
+    background-color: rgb(171, 187, 207);
+  }
+  
+
+
 h1{
-    font-weight: 300;
+    font-weight: bold;
+    font-size: 50px;
     text-align: center;
 }
 
+
+
 #content{
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: auto;
 }
 
 #map{
-    width: 100%;
-    max-width: 1400px;
+    width: 70%;
+    max-width: 1100px;
     height: 600px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 0px;
+    float: right;
+    z-index: 0;
+    margin-bottom: 20px;
+    margin-top: auto;
 }
 
 .test {
@@ -30,10 +42,59 @@ h1{
 }
 
 button {
-    background-color: #5c9e8a;
-    padding: 10px;
-    width: 100px;
-    font-size: 16px;
-    border: none;
+    background-color: #2196F3;
+    border: 10px black;
+    cursor: pointer;
+    width: 100%; 
+    align-content: center;
     border-radius: 5px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #414141;
+    transition: 0.3s;
+    font-family: 'Courier New', Courier, monospace
 }
+
+button:hover {
+    background-color: rgb(145, 198, 241);
+    color: white;
+  }
+  
+
+
+ 
+  .footer {
+    position: fixed;
+    right: 2%;
+    top: 0;
+    width: 10%;
+    background-color: rgba(255, 0, 0, 0);
+    color: rgb(36, 35, 35);
+    text-align: right;
+  }
+
+
+  .locationbtn {
+    font-size: 20px;
+    width: 200px;
+    float: left;
+  }
+
+  .location {
+      left: 0;
+      right: 0;
+  }
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+

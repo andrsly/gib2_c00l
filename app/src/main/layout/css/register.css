@@ -1,0 +1,24 @@
+.cancelbtn1, .signupbtn {
+    float: left;
+    width: 50%;
+    font-size: 25px; 
+  }
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  @media screen and (max-width: 300px) {
+    .cancelbtn1, .signupbtn {
+       width: 100%;
+    }
+  }
+
