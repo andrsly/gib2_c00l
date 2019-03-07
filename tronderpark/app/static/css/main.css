@@ -1,9 +1,6 @@
-
-
-
 body {
     font-family: 'Lato', Courier;
-    background-color: rgb(171, 187, 207);
+    background-color: rgb(134, 186, 199);
   }
   
 
@@ -11,7 +8,8 @@ body {
 h1{
     font-weight: bold;
     font-size: 50px;
-    text-align: center;
+    text-align: right;
+    margin-right: 6%;
 }
 
 
@@ -35,6 +33,8 @@ h1{
     z-index: 0;
     margin-bottom: 20px;
     margin-top: auto;
+    position: relative;
+   
 }
 
 .test {
@@ -60,9 +60,6 @@ button:hover {
     background-color: rgb(145, 198, 241);
     color: white;
   }
-  
-
-
  
   .footer {
     position: fixed;
@@ -76,25 +73,22 @@ button:hover {
 
 
   .locationbtn {
-    font-size: 20px;
+    font-size: 16px;
     width: 200px;
-    float: left;
+    
   }
 
   .location {
       left: 0;
       right: 0;
+      width: 70%;
+      float: left;
+      clear: left;
+  }
+
+  .left {
+      position: absolute;
+      width: 30%
   }
 
   
-
-  
-
-  
-  
-  
-  
-  
-  
-  
-
