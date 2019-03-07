@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, redirect, url_for, request
 
 #@app.route('/')
 #def helloworld():
@@ -16,3 +16,25 @@ def nettsiden ():
 @app.route ('/')
 def home ():
     return render_template('home.html')
+
+@app.route ('/map/')
+def map ():
+    return render_template('map.html')
+
+@app.route ('/work/')
+def work():
+    return render_template('work.html')
+
+@app.route ('/review/')
+def review ():
+    return render_template('review.html')
+
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return redirect(url_for('home'))
+    return render_template('login.html', error=error)

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <body>
+     {% extends "layout.html" %}
+        {% block content %}
+
+
+<!-- Map Section -->
+<div class="w3-container" style="padding:128px 16px" id="mapsec">
+  <h3 class="w3-center">KART</h3>
+  <p class="w3-center w3-large">Her ser du et kart over Trondheim, med markert ut parkeringshus</p>
+  
+  <!-- Location -->
+  <div id="location" class = "location">
+    <button action="none" onclick="getLocation()" class = "locationbtn">Finn lokasjon</button>
+    
+    </div>
+    <!-- /Location -->
+
+  <div id="map"></div>
+
+<script src="..\static\js\main.js"></script>
+<script src="..\static\js\location.js"></script>
+
+{% endblock %}
+</body>
+</html>
