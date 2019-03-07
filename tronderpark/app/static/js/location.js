@@ -9,6 +9,13 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+  /*x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;*/
+   var circle = L.circle([position.coords.latitude, position.coords.longitude], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 30
+    }).addTo(map);
+  marker.bindPopup("<h4> Lokasjon </h4>");
 }
