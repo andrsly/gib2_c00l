@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <title>TrønderPark</title>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        
+        <!-- Dependencies -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+        <script src="..\static\js\parkeringshus.js"></script>
+
+        <!-- Stylesheets (css) -->
+        <link rel="stylesheet" href="..\static\css\main.css" />
+        <link rel="stylesheet" href="..\static\css\login.css" />
+        <link rel="stylesheet" href="..\static\css\search.css"/>
+        <link rel="stylesheet" href="..\static\css\sidemenu.css"/>
+        <link rel="stylesheet" href="..\static\css\register.css"/>
+
+    </head>
+    <body>
+            <!-- Side menu -->
+            <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                      <a href="..\templates\nettsiden.html" >Oversikt</a>
+                      <a href="#">Kontakt oss</a>
+                      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Logg inn</button>
+                      <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrer deg</button>
+                    </div>
+                  </div>
+                               
+              <span style="font-size:30px;cursor:pointer;float: left;" onclick="openNav()">&#9776; Meny</span>
+              <!-- /Side menu -->     
+
+        
+
+        <div id="content">
+            <h1>Parkeringshus i Trondheim</h1>
+
+      <div id="leftside" class = "left">
+
+        <!-- Search -->
+        <div id = "search" class = "search">
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <h3>Skriv inn adresse for å finne nærmeste parkeringshus</h3 >
+            <input type="text" placeholder="Skriv inn adresse... " name="search2">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+        <!-- /Search -->
+        
+        <!-- Location -->
+        <div id="location" class = "location">
+            <h3>Click the button to get your coordinates</h3>
+            <button action="none" onclick="getLocation()" class = "locationbtn">Try It</button>
+            <p id="demo" class = "left"> </p>
+            </div>
+            <!-- /Location -->
+  
+        
+      </div>
+
+          <div id="map"></div>
+
+   
+  <!-- Log in -->
+  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="" alt="" class="">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Epost</b></label>
+      <input type="text" placeholder="Skriv inn epost" name="uname" required>
+
+      <label for="psw"><b>Passord</b></label>
+      <input type="password" placeholder="Skriv inn passord" name="psw" required>
+        
+      <button type="submit" class = "loginbtn">Logg inn</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+<!-- /Log in -->
+
+<!-- Sign up -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Lag bruker</h1>
+      <p>Vennligst fyll ut disse feltene for å lage en bruker</p>
+      <hr>
+      <label for="email"><b>Epost</b></label>
+      <input type="text" placeholder="Skriv inn epost" name="email" required>
+
+      <label for="psw"><b>Passord</b></label>
+      <input type="password" placeholder="Skriv inn passord" name="psw" required>
+
+      <label for="psw-repeat"><b>Gjenta passord</b></label>
+      <input type="password" placeholder="Gjenta passord" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>Ved å registrere deg godtar du våre <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Registrer</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- /Sign up -->
+
+<!-- Footer -->
+<div class="footer">
+   <img class='test' src ="http://parkpunkt.com/wp-content/uploads/2018/06/Download.png-PP.png"> </img>
+  </div>
+<!-- /Footer -->
+
+        </div>
+
+        
+            
+            
+
+
+
+
+<!-- -------------------------------------------------------------------------------- -->
+
+        <script src="..\static\js\main.js"></script>
+        <script src="..\static\js\login.js"></script>
+        <script src="..\static\js\sidemenu.js"></script>
+        <script src="..\static\js\register.js"></script>
+        <script src="..\static\js\location.js"></script>
+    </body>
+</html>
+

@@ -13,8 +13,8 @@ var utesteder = {
         "type": "Feature",
         "id": "node/2968701935",
         "properties": {
-          "name": "Elgseter P-hus",
-          "desc": "Digger å parkere her!",
+          "name": "Elgeseter P-hus",
+          "desc": "Mandag: 06:00-23:30 <br>Tirsdag: 06:00-23:30 <br>Onsdag: 06:00-23:30<br>Torsdag: 06:00-23:30<br>Fredag: 06:00-23:30<br>Lørdag: 06:00-23:30<br>Søndag: 06:00-23:30",
           "image": "",
         },
         "geometry": {
@@ -31,7 +31,7 @@ var utesteder = {
         "id": "node/3052351994",
         "properties": {
           "name": "Parkering Harald Hårfagres gate 8",
-          "desc": "Parker her",
+          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -50,7 +50,7 @@ var utesteder = {
         "id": "node/3985714094",
         "properties": {
           "name": "Parkering Eirik Jarls gate",
-          "desc": "Kuleste gata i byen",
+          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -101,7 +101,7 @@ var utesteder = {
         "id": "node/3985714093",
         "properties": {
           "name": "Torget P-hus",
-          "desc": "Tekst",
+          "desc": "Mandag: 06:30-21:00 <br>Tirsdag: 06:30-21:00 <br>Onsdag: 06:30-21:00<br>Torsdag: 06:30-21:00<br>Fredag: 06:30-21:00<br>Lørdag: 06:30-19:30<br>Søndag: Stengt",
           "image": "",
         },
         "geometry": {
@@ -134,7 +134,7 @@ var utesteder = {
         "id": "node/3985714096",
         "properties": {
           "name": "Sandgata P-hus",
-          "desc": "Tekst",
+          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -168,7 +168,7 @@ var utesteder = {
         "id": "node/3985714098",
         "properties": {
           "name": "Bilhuset Ola Brun AS",
-          "desc": "Tekst",
+          "desc": "Mandag: 06:00-00:00 <br>Tirsdag: 06:00-00:00 <br>Onsdag: 06:00-00:00<br>Torsdag: 06:00-00:00<br>Fredag: 06:00-00:00<br>Lørdag: 07:00-00:00<br>Søndag: 09:00-00:00",
           "image": "",
         },
         "geometry": {
@@ -184,7 +184,7 @@ var utesteder = {
         "id": "node/3985714099",
         "properties": {
           "name": "Bakklandet P-hus",
-          "desc": "Tekst",
+          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -201,7 +201,7 @@ var utesteder = {
         "id": "node/3985714234",
         "properties": {
           "name": "Brattøra P-hus",
-          "desc": "Tekst",
+          "desc": "Mandag: 05:30-00:00 <br>Tirsdag: 05:30-00:00 <br>Onsdag: 05:30-00:00<br>Torsdag: 05:30-00:00<br>Fredag: 05:30-00:00<br>Lørdag: 09:00-00:00<br>Søndag: 09:00-00:00",
           "image": "",
         },
         "geometry": {
@@ -235,7 +235,7 @@ var utesteder = {
         "id": "node/3985714236",
         "properties": {
           "name": "Portalen P-hus",
-          "desc": "Tekst",
+          "desc": "Mandag: 06:00-23:00 <br>Tirsdag: 06:00-23:00 <br>Onsdag: 06:00-23:00<br>Torsdag: 06:00-23:00<br>Fredag: 06:00-23:00<br>Lørdag: 06:00-23:00<br>Søndag: 06:00-23:00",
           "image": "",
         },
         "geometry": {
@@ -252,7 +252,7 @@ var utesteder = {
         "id": "node/3985714237",
         "properties": {
           "name": "Solsiden P-hus",
-          "desc": "Tekst",
+          "desc": "Mandag: 06:30-00:00 <br>Tirsdag: 06:30-00:00 <br>Onsdag: 06:30-00:00<br>Torsdag: 06:30-00:00<br>Fredag: 06:30-00:00<br>Lørdag: 06:30-00:00<br>Søndag: 06:30-00:00",
           "image": "",
         },
         "geometry": {

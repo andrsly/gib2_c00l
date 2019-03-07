@@ -9,7 +9,7 @@ from flask import Flask, jsonify, render_template
 #def user(username):
 #    return jsonify(dict(user=username))
 
-@app.route ('/nettsiden')
+@app.route ('/templates/nettsiden.html')
 def nettsiden ():
     return render_template('nettsiden.html')
 
