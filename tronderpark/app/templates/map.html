@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html>
+<style>
+
+.location {
+  float: left;
+  align-content: center;
+  position: absolute;
+  width: 30%;
+}
+
+.locationbtn {
+    border: 10px black;
+    cursor: pointer;
+    background-color: #2196F3;
+    font-size: 20px;
+    transition: 0.3s;
+    width: 200px;
+    color: white;
+    padding: 8px;
+    
+
+}
+
+.locationbtn:hover {
+  background-color: rgb(145, 198, 241);
+  color: rgb(35, 41, 46);
+}
+
+#map{
+    max-width: 1000px;
+    height: 580px;
+    margin-left: auto;
+    margin-right: auto; 
+    z-index: 0;
+    float: right;
+    position: relative;
+    width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  #map {
+    height: 450px;
+    z-index: 0;
+    width: 100%;
+    float: none;
+    position: relative;
+  }
+
+  .location {
+    width: 100%;
+    float: none;
+    position: relative;
+    
+  }
+
+  .locationbtn {
+    font-size: 14px;
+    width: 30%;
+    position: relative;
+    float: right;
+
+  }
+
+  .info1 {
+    font-size: 16px;
+    float: left;
+    position: relative;
+    width: 60%;
+  }
+
+
+
+} 
+
+</style>
+
  <body>
      {% extends "layout.html" %}
         {% block content %}
 
 
 <!-- Map Section -->
-<div class="w3-container" style="padding:128px 16px" id="mapsec">
-  <h3 class="w3-center">KART</h3>
-  <p class="w3-center w3-large">Her ser du et kart over Trondheim, med markert ut parkeringshus</p>
+<div class="w3-container" style="padding:75px 30px" id="mapsec">
+  <h2 class="w3-center">KART</h2>
+  
   
   <!-- Location -->
   <div id="location" class = "location">
-    <button action="none" onclick="getLocation()" class = "locationbtn">Finn lokasjon</button>
+    <h3 class = "info1">Her ser du et kart over Trondheim, med markert ut parkeringshus<br></h3>
+    <button action="none" onclick="getLocation()" class = "locationbtn">Finn din lokasjon</button><br>
     
     </div>
     <!-- /Location -->
@@ -21,6 +97,7 @@
 
 <script src="..\static\js\main.js"></script>
 <script src="..\static\js\location.js"></script>
+
 
 {% endblock %}
 </body>

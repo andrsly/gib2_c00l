@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="..\static\js\parkeringshus.js"></script>
+    <link rel="stylesheet" href="../static/css/map.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
@@ -41,15 +42,13 @@ body, html {
     width: 50px;
 }
 
-
-#map{
-    width: 90%;
-    max-width: 1100px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto; 
-    z-index: 0;
+@media only screen and (max-width: 600px) {
+  .test {
+    width: 30px;
+  }
 }
+
+
 
 
 </style>
@@ -89,4 +88,18 @@ body, html {
             {% endblock %}
           </div>
 </body>
+<script>
+  function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
 </html>
