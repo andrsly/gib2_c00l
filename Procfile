@@ -1,3 +1,1 @@
-release: cd tronderpark
-web: gunicorn app:app
-
+web: cd tronderpark; gunicorn app:app
