@@ -1,4 +1,4 @@
-var map = L.map("map").setView([63.43, 10.395], 13.5 );
+var map = L.map("map").setView([63.43, 10.395], 13 );
 
 //Initializing the map
 function setMap() {
@@ -32,8 +32,4 @@ function setMap() {
  
   
 window.onload = setMap;
-
-function locateUser(){
-  map.locate({setView : true});
-}
 

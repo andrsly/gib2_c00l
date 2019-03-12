@@ -16,6 +16,5 @@ function showPosition(position) {
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 30
-    }).addTo(map);
-  marker.bindPopup("<h4> Lokasjon </h4>");
+    }).bindPopup("Lokasjon").addTo(map);
 }
