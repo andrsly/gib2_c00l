@@ -1,5 +1,3 @@
-"scripts": {
-  "heroku-prebuild": "cd tronderpark",
-}
-web gunicorn app:app
+release: cd tronderpark
+web: gunicorn app:app
 
