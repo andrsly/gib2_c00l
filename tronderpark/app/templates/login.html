@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <body>
+
     {% extends "layout.html" %}
-    {% block content %}            
-  <head>
-    <title>Flask Intro - Login page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+    {% block content %}
+    <link rel="stylesheet" href="../static/css/login.css" />          
+      <br>
+      <br>
+      <br>
+      <br>
     <div class="container">
-      <h1>Please login</h1>
+      <h1>Vennligst login</h1>
       <br>
       <form action="" method="post">
-        <input type="text" placeholder="Username" name="username" value="{{
+        <input type="text" placeholder="Brukernavn" name="username" value="{{
           request.form.username }}">
-         <input type="password" placeholder="Password" name="password" value="{{
+         <input type="password" placeholder="Passord" name="password" value="{{
           request.form.password }}">
         <input class="btn btn-default" type="submit" value="Login">
       </form>
@@ -21,7 +23,12 @@
         <p class="error"><strong>Error:</strong> {{ error }}
       {% endif %}
     </div>
-            
+     
+    <div class = "container">
+      <h3> Ny bruker? Registrer deg 
+      <a href="/register/" class="her_button" style="font-size: 22px"> her.</a> </h3>
+    </div>
+    
   {% endblock %}
   </body>
 </html>
