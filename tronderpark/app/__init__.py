@@ -1,11 +1,13 @@
 from flask import Flask
+from config import Config
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+#from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+#auth = HTTPBasicAuth()
 
-from app import routes
-
-if __name__ == "__main__":
-   app.run(port=80,debug=True)
-   #app.set( 'port', ( process.env.PORT=5000 ))
-   #port = int(os.environ.get("PORT", 5000))
-    #app.run(host='0.0.0.0', port=port)
+from app import routes, models
