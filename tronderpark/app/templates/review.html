@@ -16,7 +16,7 @@
           <h3>PARKERINGSHUS 1</h3>
           <p class="w3-opacity">RATING 1-10</p>
           <p>Beskrivende tekst.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i onclick="myFunction(this)" class="fa fa-thumbs-o-up"></i>Lik denne anmeldelsen</button></p>
+          <p><div id="root"></div></p>
         </div>
       </div>
     </div>
@@ -94,16 +94,18 @@
     </div>
   </div>
 
-  <form name="myform">
-      <!--input type="submit" onclick="this.disabled = true" value="Save" -->
-      <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-      <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true"> 
-      <input type="button" value="Unlike!" onclick="subtractone(myfield);"><br>
-      </form>
+
+
+
+      <div id="like_button_container"></div>
+      <Count isUndoable={true} actionDoText="follow" actionUndoText="unfollow" counterText="followers" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'></Count>
+      <OnlineCount counterText="views" firebaseHost="https://counter-button.firebaseio.com/"/ firebaseResourceId='another-online-counter'></OnlineCount>
       
 
-
-
+<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+<script src="../static/js/Likes.js"></script>
+<script src="../static/js/index.js"></script>
 
 <script>
 function myFunction(x) {
