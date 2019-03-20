@@ -34,11 +34,15 @@ def login():
     error = None
     if request.method == 'POST':
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Invalid Credentials. Please try again.'
+            error = 'Ugyldig brukernavn eller passord. Vennligst prøv igjen.'
         else:
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
+
 if __name__ == "__main__":
    app.run(port=80,debug=True)
     
+@app.route('/register/')
+def register():
+    return render_template('register.html')
