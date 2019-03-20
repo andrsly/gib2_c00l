@@ -43,6 +43,6 @@ def login():
 if __name__ == "__main__":
    app.run(port=80,debug=True)
     
-@app.route('/register/')
-def register():
-    return render_template('register.html')
+#@app.route('/register/')
+#def register():
+#    return render_template('register.html')
