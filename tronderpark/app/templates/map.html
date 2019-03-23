@@ -3,24 +3,17 @@
 <style>
 
 .location {
-  float: left;
-  align-content: center;
-  position: absolute;
-  width: 30%;
+  align-content: center; 
 }
 
 .locationbtn {
     border: 10px black;
     cursor: pointer;
     background-color: #2196F3;
-    font-size: 20px;
     transition: 0.3s;
-    width: 200px;
     color: white;
     padding: 8px;
-    
-
-}
+    }
 
 .locationbtn:hover {
   background-color: rgb(145, 198, 241);
@@ -29,22 +22,18 @@
 
 #map{
     max-width: 1000px;
-    height: 580px;
     margin-left: auto;
     margin-right: auto; 
     z-index: 0;
-    float: right;
     position: relative;
-    width: 70%;
+    
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   #map {
     height: 450px;
-    z-index: 0;
     width: 100%;
     float: none;
-    position: relative;
   }
 
   .location {
@@ -68,10 +57,64 @@
     position: relative;
     width: 60%;
   }
-
-
-
 } 
+
+@media only screen and (min-width: 700px) {
+  #map {
+    height: 450px;
+    width: 100%;
+    float: none;
+  }
+
+  .location {
+    width: 100%;
+    float: none;
+    position: relative;
+    
+  }
+
+  .locationbtn {
+    font-size: 14px;
+    width: 30%;
+    position: relative;
+    float: right;
+
+  }
+
+  .info1 {
+    font-size: 20px;
+    float: left;
+    position: relative;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+    #map {
+      width: 65%;
+      height: 580px;
+      float: right;
+    }
+
+    .location {
+      float: left;
+      width: 30%;
+      position: absolute;
+    }
+
+    .locationbtn {
+      font-size: 20px;
+      width: 200px;
+      float: left;
+    }
+
+    .info1 {
+      font-size: 22px;
+      width: 100%;
+    }
+}
+
+
 
 </style>
 
@@ -113,7 +156,7 @@ function showPosition(position) {
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 30
-    }).bindPopup("Lokasjon").addTo(map);
+    }).bindPopup("Lokasjon").openPopup().addTo(map);
 }
 
 </script>
