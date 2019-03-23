@@ -39,10 +39,12 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
+@app.route('/register/')
+def register():
+    return render_template('register.html')
+
 
 if __name__ == "__main__":
    app.run(port=80,debug=True)
     
-#@app.route('/register/')
-#def register():
-#    return render_template('register.html')
+
