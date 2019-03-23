@@ -26,13 +26,7 @@ body, html {
   min-height: 100%;
 }
 
-.test {
-    width: 60px;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0%;
-}
+
 
 .w3-bar .w3-button {
   padding: 16px;
@@ -46,8 +40,51 @@ body, html {
   .test {
     width: 30px;
   }
+
 }
 
+
+
+@media only screen and (min-width: 600px)  {
+  .test {
+   width: 30px;
+  }
+  
+  .w3-button{
+    font-size: 11px;
+  
+  }
+}
+
+@media only screen and (min-width: 735px) {
+  .w3-button {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 855px) {
+  .test {
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0%;
+}
+.w3-button {
+    font-size: 18px;
+
+  }
+ 
+}
+
+@media only screen and (min-width: 1200px) {
+  .w3-button {
+    font-size: 22px;
+  }
+  .test {
+    width: 60px;
+  }
+}
 
 
 
@@ -61,11 +98,11 @@ body, html {
     <a href="/" class="w3-bar-item w3-button w3-wide"><img class='test' src ="http://parkpunkt.com/wp-content/uploads/2018/06/Download.png-PP.png"> </img></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="/" class="w3-bar-item w3-button" style="font-size: 22px">OM TRØNDERPARK</a>
-      <a href="/map/" class="w3-bar-item w3-button" style="font-size: 22px"><i class="fa fa-globe"></i> KART</a>
-      <a href="/work/" class="w3-bar-item w3-button" style="font-size: 22px"><i class="fa fa-automobile"></i> OVERSIKT</a>
-      <a href="/review/" class="w3-bar-item w3-button" style="font-size: 22px"><i class="fa fa-comments"></i> ANMELDELSER</a>
-      <a href="/login/" class="w3-bar-item w3-button" style="font-size: 22px"><i class="fa fa-user"></i> MIN SIDE</a>
+      <a href="/" class="w3-bar-item w3-button" >OM TRØNDERPARK</a>
+      <a href="/map/" class="w3-bar-item w3-button" ><i class="fa fa-globe"></i> KART</a>
+      <a href="/work/" class="w3-bar-item w3-button" ><i class="fa fa-automobile"></i> OVERSIKT</a>
+      <a href="/review/" class="w3-bar-item w3-button" ><i class="fa fa-comments"></i> ANMELDELSER</a>
+      <a href="/login/" class="w3-bar-item w3-button" ><i class="fa fa-user"></i> MIN SIDE</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -76,18 +113,24 @@ body, html {
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
-  <a href="/" onclick="w3_close()" class="w3-bar-item w3-button">OM OSS</a>
-  <a href="/map/" onclick="w3_close()" class="w3-bar-item w3-button">KART</a>
-  <a href="/work/" onclick="w3_close()" class="w3-bar-item w3-button">OVERSIKT</a>
-  <a href="/review/" onclick="w3_close()" class="w3-bar-item w3-button">ANMELDELSER</a>
-  <a href="/login/" onclick="w3_close()" class="w3-bar-item w3-button">MIN SIDE</a>
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-right w3-hide-medium w3-hide-large" style="display:none; right:0px; left: auto" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" style="text-align: right"> <i class="fa fa-times"></i></a>
+  <a href="/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">OM OSS  </a> 
+  <a href="/map/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">KART  <i class="fa fa-globe"></i></a>
+  <a href="/work/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">OVERSIKT  <i class="fa fa-automobile"></i></a>
+  <a href="/review/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">ANMELDELSER  <i class="fa fa-comments"></i></a>
+  <a href="/login/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">MIN SIDE  <i class="fa fa-user"></i></a>
 </nav>
             {% block content %}
             {% endblock %}
           </div>
+
+         
+
+          
+
 </body>
+
 <script>
   function w3_open() {
   if (mySidebar.style.display === 'block') {
