@@ -19,7 +19,50 @@ function setMap() {
     L.geoJSON(utesteder, {
       onEachFeature: onEachFeature
     }).addTo(map);
+
+    L.geoJSON(geojsonFeature).addTo(map);
+
+
+    //Popup when you click on map to show nearest parkinglot
+    var popup = L.popup();
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("Den nærmeste parkeringsplassen er " + findNearest(e).toString())
+            .openOn(map);
+    }
+    
+    function findNearest(e) {
+      var coord, lat, lng, string, strings, dis, name;
+    
+      string = utesteder.features[0].geometry.coordinates.toString();
+      strings = string.split(",");
+      lat = strings[1];
+      lng = strings[0];
+      coord = L.latLng([lat, lng]);
+    
+      dis = e.latlng.distanceTo(coord);
+      name = utesteder.features[0].properties.name;
+    
+      for (var i = 1; i< utesteder.features.length;i++) {
+        string = utesteder.features[i].geometry.coordinates.toString();
+        strings = string.split(",");
+        lat = strings[1];
+        lng = strings[0];
+        coord = L.latLng([lat, lng]);
+        if (dis > e.latlng.distanceTo(coord)){
+          dis = e.latlng.distanceTo(coord);
+          name = utesteder.features[i].properties.name;
+       }
+    }
+      return name;
+    }
+    
+    map.on('click', onMapClick);
   }
+
+  
   
   
   
