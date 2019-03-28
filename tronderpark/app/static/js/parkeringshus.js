@@ -5,9 +5,7 @@ var utesteder = {
     "timestamp": "2017-02-08T08:54:02Z",
     "features": [
   
-      
-   
-     
+          
      
       {
         "type": "Feature",
@@ -280,6 +278,9 @@ var utesteder = {
           ]
         }
       },
+
+
+
     ]
     } 
   
