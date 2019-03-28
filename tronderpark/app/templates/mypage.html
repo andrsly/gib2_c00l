@@ -1,7 +1,7 @@
   <!DOCTYPE html>
 <html>
 <body>
-
+    
     {% extends "layout.html" %}
     {% block content %} 
     <link rel="stylesheet" href="../static/css/register.css" />
@@ -10,7 +10,7 @@
     <br>
   
     <div class="container">
-    <h1>Registrer ny bruker</h1>
+    <h1>DU ER LOGGET INN MIN VENN</h1>
     <p>Vennligst fyll inn feltene.</p>
     <hr>
     <form action"" method=post">
@@ -20,13 +20,6 @@
         {{ form.username(size=32) }}<br>
         {% for error in form.username.errors %}
         <span style='color: red;'>[{{ error }}]</span>
-        {% endfor %}
-      </p>
-      <p>
-        {{ form.email.label }}<br>
-        {{ form.email(size=64) }}<br>
-        {% for error in form.email.errors %}
-        <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
       </p>
       <p>
@@ -43,10 +36,7 @@
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
       </p>
-      <p>
-        {{ form.submit() }}
-
-      </p>
+      <p>{{ form.submit() }}</p>
     </form>
 
       <p>Ved å lage en bruker så godtar du våre <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
@@ -54,9 +44,9 @@
       <div class="clearfix">
         <button type="submit" class="signupbtn">Registrer</button>
         <button type="button" class="cancelbtn">Avbryt</button><br>
+
       </div>
     {{ endblock }}
-
     {% endblock %}
   </body>
 </html>

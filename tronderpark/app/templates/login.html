@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
 
     {% extends "layout.html" %}
     {% block content %}
@@ -10,25 +7,46 @@
       <br>
       <br>
     <div class="container">
-      <h1>Vennligst login</h1>
+      <h1>Vennligst logg inn</h1>
       <br>
-      <form action="" method="post">
-        <input type="text" placeholder="Brukernavn" name="username" value="{{
+      <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+          {{ form.username.label }}<br>
+          {{ form.username(size=32) }}<br>
+          {% for error in form.username.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+        </p>
+        <p>
+          {{ form.password.label }}<br>
+          {{ form.password(size=32)}}<br>
+          {% for error in form.password.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+
+
+        <!--<input type="text" placeholder="Brukernavn" name="username" value="{{
           request.form.username }}">
          <input type="password" placeholder="Passord" name="password" value="{{
           request.form.password }}">
         <input class="btn btn-default" type="submit" value="Login">
+        
       </form>
       {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
       {% endif %}
     </div>
+    -->
      
     <div class = "container">
       <h3> Ny bruker? Registrer deg 
-      <a href="/register/" class="her_button" style="font-size: 22px"> her.</a> </h3>
+      <a href="{{ url_for('register') }}" class="her_button" style="font-size: 22px"> her.</a> </h3>
     </div>
+
+      </form>
     
   {% endblock %}
-  </body>
-</html>
