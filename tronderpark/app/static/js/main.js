@@ -1,10 +1,8 @@
-var map = L.map("map").setView([63.43, 10.395], 13 );
 
 //Initializing the map
 function setMap() {
     console.log("Loading map");
-  
-    
+      
     //Set view takes two parameters;
     //1. The coordinates for the center of the map
     //2. The zoom level. Zoomlevel is from 0 -> 22, where 22 is zoomed in an 0 is zoomed out
@@ -20,13 +18,13 @@ function setMap() {
       onEachFeature: onEachFeature
     }).addTo(map);
 
-    L.geoJSON(geojsonFeature).addTo(map);
 
 
-    //Popup when you click on map to show nearest parkinglot
+    //Popup when you click on map to show nearest parking lot
     var popup = L.popup();
 
     function onMapClick(e) {
+        console.log('clicked map')
         popup
             .setLatLng(e.latlng)
             .setContent("Den nærmeste parkeringsplassen er " + findNearest(e).toString())
