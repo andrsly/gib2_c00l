@@ -2,10 +2,6 @@ from app import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
-@login.user_loader
-def load_user(id):
-    return User1.query.get(int(id))
-
 class User1(UserMixin, db.Model):
     ___tablename__ = "User1"
     id = db.Column(db.Integer, primary_key=True)
@@ -21,6 +17,10 @@ class User1(UserMixin, db.Model):
 
     def __repr__(self):
         return '<User1 {}>'.format(self.username)
+
+@login.user_loader
+def load_user(id):
+    return User1.query.get(int(id))
 
 class Carpark(db.Model):
     __tablename__ = "Carpark"

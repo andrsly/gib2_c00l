@@ -10,8 +10,8 @@ def home():
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
-    #if current_user.is_authenticated:
-    #    return redirect('/home/')
+   # if current_user.is_authenticated:
+   #     return redirect('/mypage/')
     form = LoginForm()
     if form.validate_on_submit():
         user = User1.query.filter_by(username=form.username.data).first()
