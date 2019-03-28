@@ -1,21 +1,51 @@
-from app import app
-from flask import Flask, jsonify, render_template, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for
+from app import app, db
+from app.forms import LoginForm, RegistrationForm
+from flask_login import current_user, login_user, logout_user
+from app.models import User1
 
-#@app.route('/')
-#def helloworld():
-#    return jsonify(dict(data='Hello World'))
+@app.route('/')
+def home():
+    return render_template('/home.html')
 
-#@app.route('/user/<username>')
-#def user(username):
-#    return jsonify(dict(user=username))
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+   # if current_user.is_authenticated:
+   #     return redirect('/home/')
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User1.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect('/login')
+        login_user(user, remember=form.remember_me.data)
+        return redirect(url_for('.home'))
+    print('hei')
+    return render_template('/login.html', title='Logg inn', form=form)
+
+@app.route('/logout/')
+def logout():
+    logout_user()
+    return redirect(url_for('.home'))
+
+@app.route('/register/', methods=['GET', 'POST'])
+def register():
+   #if current_user.is_authenticated:
+   #     return redirect('/home')
+    print('hei2')
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User1(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Velkommen til verdens beste web-applikasjon!')
+        return redirect(url_for('.login'))
+    return render_template('register.html', title='Register', form=form)
 
 @app.route ('/templates/nettsiden.html')
 def nettsiden ():
     return render_template('nettsiden.html')
-
-@app.route ('/')
-def home ():
-    return render_template('home.html')
 
 @app.route ('/map/')
 def map ():
@@ -28,21 +58,3 @@ def work():
 @app.route ('/review/')
 def review ():
     return render_template('review.html')
-
-@app.route('/login/', methods=['GET', 'POST'])
-def login():
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Ugyldig brukernavn eller passord. Vennligst prøv igjen.'
-        else:
-            return redirect(url_for('home'))
-    return render_template('login.html', error=error)
-
-
-if __name__ == "__main__":
-   app.run(port=80,debug=True)
-    
-#@app.route('/register/')
-#def register():
-#    return render_template('register.html')

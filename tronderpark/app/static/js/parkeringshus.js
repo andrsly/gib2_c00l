@@ -22,49 +22,13 @@ var utesteder = {
             63.415466
           ]
         }
-      },
-     
-      {
-        "type": "Feature",
-        "id": "node/3052351994",
-        "properties": {
-          "name": "Parkering Harald Hårfagres gate 8",
-          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
-          "image": "",
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            10.394554,
-            63.419863
-          ]
-        }
-      },
-     
-    
-    
-      {
-        "type": "Feature",
-        "id": "node/3985714094",
-        "properties": {
-          "name": "Parkering Eirik Jarls gate",
-          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
-          "image": "",
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            10.390414,
-            63.421947
-          ]
-        }
-      },
+      }, 
 
       {
         "type": "Feature",
         "id": "node/3985714091",
         "properties": {
-          "name": "Mauritz Hansens gate",
+          "name": "Øya Helsehus P-hus",
           "desc": "Tekst",
           "image": "",
         },
@@ -266,15 +230,31 @@ var utesteder = {
         "type": "Feature",
         "id": "node/3985714238",
         "properties": {
-          "name": "Sentralstasjonen",
+          "name": "Finalebanen P-hus",
           "desc": "Tekst",
           "image": "",
         },
         "geometry": {
           "type": "Point",
           "coordinates": [
-            10.403862,
-            63.436787
+            10.39219,
+            63.41954
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "node/3985714238",
+        "properties": {
+          "name": "St. Olavs Hospital P-hus",
+          "desc": "Tekst",
+          "image": "",
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            10.39256,
+            63.42095
           ]
         }
       },
