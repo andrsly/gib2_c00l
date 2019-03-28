@@ -102,7 +102,12 @@ body, html {
       <a href="/map/" class="w3-bar-item w3-button" ><i class="fa fa-globe"></i> KART</a>
       <a href="/work/" class="w3-bar-item w3-button" ><i class="fa fa-automobile"></i> OVERSIKT</a>
       <a href="/review/" class="w3-bar-item w3-button" ><i class="fa fa-comments"></i> ANMELDELSER</a>
-      <a href="/login/" class="w3-bar-item w3-button" ><i class="fa fa-user"></i> MIN SIDE</a>
+      {% if current_user.is_anonymous %}
+      <a href="/login/" class="w3-bar-item w3-button" ><i class="fa fa-user"></i> LOGG INN</a>
+      {% else %}
+      <a href="/logout/" class="w3-bar-item w3-button" ><i class="fa fa-user-times"></i> LOGG UT</a>
+      {% endif %}
+
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -119,7 +124,12 @@ body, html {
   <a href="/map/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">KART  <i class="fa fa-globe"></i></a>
   <a href="/work/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">OVERSIKT  <i class="fa fa-automobile"></i></a>
   <a href="/review/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">ANMELDELSER  <i class="fa fa-comments"></i></a>
-  <a href="/login/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">MIN SIDE  <i class="fa fa-user"></i></a>
+  {% if current_user.is_anonymous %}
+  <a href="/login/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">LOGG INN  <i class="fa fa-user"></i></a>
+  {% else %}
+  <a href="/logout/" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align: right">LOGG UT  <i class="fa fa-user-times"></i></a>
+  {% endif %}
+
 </nav>
             {% block content %}
             {% endblock %}

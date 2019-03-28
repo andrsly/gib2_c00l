@@ -23,6 +23,13 @@
         {% endfor %}
       </p>
       <p>
+        {{ form.email.label }}<br>
+        {{ form.email(size=64) }}<br>
+        {% for error in form.email.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
         {{ form.password.label }}<br>
         {{ form.password(size=32) }}<br>
         {% for error in form.password.errors %}
@@ -36,44 +43,20 @@
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
       </p>
-      <p>{{ form.submit() }}</p>
+      <p>
+        {{ form.submit() }}
+
+      </p>
     </form>
 
       <p>Ved å lage en bruker så godtar du våre <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
-        <button type="submit" class="signupbtn">Registrer</button>          <br>
+        <button type="submit" class="signupbtn">Registrer</button>
+        <button type="button" class="cancelbtn">Avbryt</button><br>
       </div>
     {{ endblock }}
-<!--
- 
-        <button type="button" class="cancelbtn">Avbryt</button>
-    
-    <label for="username"><b>Brukernavn</b></label>
-    <input type="text" placeholder="" name="email" required>
 
-    <br>
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="" name="email" required>
-
-    <br>
-    <label for="psw"><b>Passord</b></label>
-    <input type="password" placeholder="" name="psw" required>
-
-    <br>
-    <label for="psw-repeat"><b>Gjenta Passord</b></label>
-    <input type="password" placeholder="" name="psw-repeat" required>
-
-    <br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Husk meg
-    </label>
-
-
-  </div>
-
-      {% endblock %}
-
-      -->
+    {% endblock %}
   </body>
 </html>

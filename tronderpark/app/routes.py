@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for
 from app import app, db
 from app.forms import LoginForm, RegistrationForm
-from flask_login import current_user, login_user #logout_user
+from flask_login import current_user, login_user, logout_user
 from app.models import User1
 
 @app.route('/')
@@ -11,7 +11,7 @@ def home():
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
    # if current_user.is_authenticated:
-   #     return redirect('/mypage/')
+   #     return redirect('/home/')
     form = LoginForm()
     if form.validate_on_submit():
         user = User1.query.filter_by(username=form.username.data).first()
@@ -23,15 +23,15 @@ def login():
     print('hei')
     return render_template('/login.html', title='Logg inn', form=form)
 
-#@app.route('/logout/')
-#def logout():
-#    logout_user()
-#    return redirect(url_for('.index'))
+@app.route('/logout/')
+def logout():
+    logout_user()
+    return redirect(url_for('.home'))
 
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
-#   if current_user.is_authenticated:
-#        return redirect('/index')
+   #if current_user.is_authenticated:
+   #     return redirect('/home')
     print('hei2')
     form = RegistrationForm()
     if form.validate_on_submit():
@@ -39,7 +39,7 @@ def register():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
-        flash('Congratulations, you are now a registered user!')
+        flash('Velkommen til verdens beste web-applikasjon!')
         return redirect(url_for('.login'))
     return render_template('register.html', title='Register', form=form)
 
