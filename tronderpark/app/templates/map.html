@@ -142,25 +142,49 @@
 
 
 function getLocation() {
-  /*if (navigator.geolocation) {
+  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
-  }*/
+  }
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-
    var circle = L.circle([position.coords.latitude, position.coords.longitude], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 30
-    }).bindPopup("Lokasjon").openPopup().addTo(map);
+    }).bindPopup("Den nærmeste parkeringsplassen til din lokasjon er " + findNearestPos(position).toString()).openPopup().addTo(map);
 
 }
+
+function findNearestPos(position) {
+      var coord, lat, lng, string, strings, dis, name;
+    
+      string = utesteder.features[0].geometry.coordinates.toString();
+      strings = string.split(",");
+      lat = strings[1];
+      lng = strings[0];
+      coord = L.latLng([lat, lng]);
+      pos = L.latLng([position.coords.latitude, position.coords.longitude]);
+    
+      dis = pos.distanceTo(coord);
+      name = utesteder.features[0].properties.name;
+    
+      for (var i = 1; i< utesteder.features.length;i++) {
+        string = utesteder.features[i].geometry.coordinates.toString();
+        strings = string.split(",");
+        lat = strings[1];
+        lng = strings[0];
+        coord = L.latLng([lat, lng]);
+        if (dis > pos.distanceTo(coord)){
+          dis = pos.distanceTo(coord);
+          name = utesteder.features[i].properties.name;
+       }
+    }
+      return name;
+    }
 
 var map = L.map("map").setView([63.43, 10.395], 13 );
 
@@ -222,6 +246,7 @@ function setMap() {
     }
     
     map.on('click', onMapClick);
+
   }
 
   
@@ -243,8 +268,8 @@ window.onload = setMap;
 
 
 
-<!--<script src="..\static\js\main.js"></script>-->
-<script src="..\static\js\location.js"></script>
+<!--<script src="..\static\js\main.js"></script>
+<script src="..\static\js\location.js"></script>-->
 
 
 {% endblock %}
