@@ -14,7 +14,7 @@ class user1(UserMixin, db.Model):
     def __init__(self, username, email, password):
         self.username = username.title()
         self.email = email.lower()
-        self.set_password(password_hash)
+        self.set_password(password)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)

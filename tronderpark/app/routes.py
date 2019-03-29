@@ -35,8 +35,7 @@ def register():
     print('hei2')
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = user1(username=form.username.data, email=form.email.data)
-        user.set_password(form.password.data)
+        user = user1(username=form.username.data, email=form.email.data, password=form.password.data)
         db.session.add(user)
         db.session.commit()
         flash('Velkommen til verdens beste web-applikasjon!')
