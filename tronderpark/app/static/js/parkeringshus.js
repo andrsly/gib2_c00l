@@ -12,7 +12,7 @@ var utesteder = {
         "id": "node/2968701935",
         "properties": {
           "name": "Elgeseter P-hus",
-          "desc": "Mandag: 06:00-23:30 <br>Tirsdag: 06:00-23:30 <br>Onsdag: 06:00-23:30<br>Torsdag: 06:00-23:30<br>Fredag: 06:00-23:30<br>Lørdag: 06:00-23:30<br>Søndag: 06:00-23:30",
+          "desc": "Man-fre: 06:30-23:30 <br> Lørdag: 06:30-23:30 <br> Søndag: 06:30-23:30",
           "image": "",
         },
         "geometry": {
@@ -29,7 +29,7 @@ var utesteder = {
         "id": "node/3985714091",
         "properties": {
           "name": "Øya Helsehus P-hus",
-          "desc": "Tekst",
+          "desc": "Man-fre: Døgnåpent <br> Lørdag: Døgnåpent <br> Søndag: DØgnåpent",
           "image": "",
         },
         "geometry": {
@@ -46,7 +46,7 @@ var utesteder = {
         "id": "node/3985714092",
         "properties": {
           "name": "Statens P-hus",
-          "desc": "Tekst",
+          "desc": "Man-fre: 06:30-21:30 <br> Lørdag: 06:30-21:30 <br> Søndag: Stengt",
           "image": "",
         },
         "geometry": {
@@ -63,7 +63,7 @@ var utesteder = {
         "id": "node/3985714093",
         "properties": {
           "name": "Torget P-hus",
-          "desc": "Mandag: 06:30-21:00 <br>Tirsdag: 06:30-21:00 <br>Onsdag: 06:30-21:00<br>Torsdag: 06:30-21:00<br>Fredag: 06:30-21:00<br>Lørdag: 06:30-19:30<br>Søndag: Stengt",
+          "desc": "Man-fre: 06:30-20:30 <br> Lørdag: 08:00-18:30 <br> Søndag: Stengt",
           "image": "",
         },
         "geometry": {
@@ -80,7 +80,7 @@ var utesteder = {
         "id": "node/3985714095",
         "properties": {
           "name": "Leutenhaven P-hus",
-          "desc": "Tekst",
+          "desc": "Man-fre: 06:30-21:30 <br> Lørdag: 06:30-21:30 <br> Søndag: 06:30-21:30",
           "image": "",
         },
         "geometry": {
@@ -96,7 +96,7 @@ var utesteder = {
         "id": "node/3985714096",
         "properties": {
           "name": "Sandgata P-hus",
-          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
+          "desc": "Man-fre: Døgnåpent <br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -113,7 +113,7 @@ var utesteder = {
         "id": "node/3985714097",
         "properties": {
           "name": "Sentralbadet P-hus",
-          "desc": "Tekst",
+          "desc": "Man-fre: 06:30-21:30 <br> Lørdag: 06:30-19:00 <br> Søndag: Stengt",
           "image": "",
         },
         "geometry": {
@@ -130,7 +130,7 @@ var utesteder = {
         "id": "node/3985714098",
         "properties": {
           "name": "Bilhuset Ola Brun AS",
-          "desc": "Mandag: 06:00-00:00 <br>Tirsdag: 06:00-00:00 <br>Onsdag: 06:00-00:00<br>Torsdag: 06:00-00:00<br>Fredag: 06:00-00:00<br>Lørdag: 07:00-00:00<br>Søndag: 09:00-00:00",
+          "desc": "Man-fre: 06:00-00:00 <br>Lørdag: 07:00-00:00<br>Søndag: 09:00-00:00",
           "image": "",
         },
         "geometry": {
@@ -146,7 +146,7 @@ var utesteder = {
         "id": "node/3985714099",
         "properties": {
           "name": "Bakklandet P-hus",
-          "desc": "Mandag: Døgnåpent <br>Tirsdag: Døgnåpent <br>Onsdag: Døgnåpent<br>Torsdag: Døgnåpent<br>Fredag: Døgnåpent<br>Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
+          "desc": "Mandag: Døgnåpent <br> Lørdag: Døgnåpent<br>Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -163,7 +163,7 @@ var utesteder = {
         "id": "node/3985714234",
         "properties": {
           "name": "Brattøra P-hus",
-          "desc": "Mandag: 05:30-00:00 <br>Tirsdag: 05:30-00:00 <br>Onsdag: 05:30-00:00<br>Torsdag: 05:30-00:00<br>Fredag: 05:30-00:00<br>Lørdag: 09:00-00:00<br>Søndag: 09:00-00:00",
+          "desc": "Man-fre: 05:30-00:00 <br>Lørdag: 09:00-00:00<br>Søndag: 09:00-00:00",
           "image": "",
         },
         "geometry": {
@@ -180,7 +180,7 @@ var utesteder = {
         "id": "node/3985714235",
         "properties": {
           "name": "Pirbadet P-hus",
-          "desc": "Tekst",
+          "desc": "Man-fre: Døgnåpent <br> Lørdag: Døgnåpent <br> Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -197,7 +197,7 @@ var utesteder = {
         "id": "node/3985714236",
         "properties": {
           "name": "Portalen P-hus",
-          "desc": "Mandag: 06:00-23:00 <br>Tirsdag: 06:00-23:00 <br>Onsdag: 06:00-23:00<br>Torsdag: 06:00-23:00<br>Fredag: 06:00-23:00<br>Lørdag: 06:00-23:00<br>Søndag: 06:00-23:00",
+          "desc": "Man-fre: 06:00-23:00 <br>Lørdag: 06:00-23:00<br>Søndag: 06:00-23:00",
           "image": "",
         },
         "geometry": {
@@ -214,7 +214,7 @@ var utesteder = {
         "id": "node/3985714237",
         "properties": {
           "name": "Solsiden P-hus",
-          "desc": "Mandag: 06:30-00:00 <br>Tirsdag: 06:30-00:00 <br>Onsdag: 06:30-00:00<br>Torsdag: 06:30-00:00<br>Fredag: 06:30-00:00<br>Lørdag: 06:30-00:00<br>Søndag: 06:30-00:00",
+          "desc": "Man-fre: 06:30-00:00 <br> Lørdag: 06:30-00:00<br>Søndag: 06:30-00:00",
           "image": "",
         },
         "geometry": {
@@ -231,7 +231,7 @@ var utesteder = {
         "id": "node/3985714238",
         "properties": {
           "name": "Finalebanen P-hus",
-          "desc": "Tekst",
+          "desc": "Man-fre: Døgnåpent <br> Lørdag: Døgnåpent <br> Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
@@ -247,7 +247,7 @@ var utesteder = {
         "id": "node/3985714238",
         "properties": {
           "name": "St. Olavs Hospital P-hus",
-          "desc": "Tekst",
+          "desc": "Man-fre: Døgnåpent <br> Lørdag: Døgnåpent <br> Søndag: Døgnåpent",
           "image": "",
         },
         "geometry": {
