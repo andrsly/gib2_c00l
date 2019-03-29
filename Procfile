@@ -1,1 +1,1 @@
-web: cd tronderpark; gunicorn app:app
+web: cd tronderpark; gunicorn app:app --preload
