@@ -6,15 +6,15 @@ from flask_login import UserMixin
 
 class user1(UserMixin, db.Model):
     ___tablename__ = "user1"
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
 
     def __init__(self, username, email, password):
-        self.username = username.title()
+        self.username = username.lower()
         self.email = email.lower()
-        self.set_password(password_hash)
+        self.set_password(password)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
