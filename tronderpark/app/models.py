@@ -1,13 +1,20 @@
-from app import db, login 
+from app import db, login, app
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
+#from flask_sqlalchemy import SQLAlchemy
+#db = SQLAlchemy(app)
 
-class User1(UserMixin, db.Model):
-    ___tablename__ = "User1"
+class user1(UserMixin, db.Model):
+    ___tablename__ = "user1"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+
+    def __init__(self, username, email, password):
+        self.username = username.title()
+        self.email = email.lower()
+        self.set_password(password_hash)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -16,11 +23,11 @@ class User1(UserMixin, db.Model):
         return check_password_hash(self.password_hash, password)
 
     def __repr__(self):
-        return '<User1 {}>'.format(self.username)
+        return '<user1 {}>'.format(self.username)
 
 @login.user_loader
 def load_user(id):
-    return User1.query.get(int(id))
+    return user1.query.get(int(id))
 
 class Carpark(db.Model):
     __tablename__ = "Carpark"

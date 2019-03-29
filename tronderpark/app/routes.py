@@ -2,7 +2,7 @@ from flask import render_template, flash, redirect, url_for
 from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from flask_login import current_user, login_user, logout_user
-from app.models import User1
+from app.models import user1, db
 
 @app.route('/')
 def home():
@@ -14,7 +14,7 @@ def login():
    #     return redirect('/home/')
     form = LoginForm()
     if form.validate_on_submit():
-        user = User1.query.filter_by(username=form.username.data).first()
+        user = user1.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect('/login')
@@ -35,7 +35,7 @@ def register():
     print('hei2')
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User1(username=form.username.data, email=form.email.data)
+        user = user1(username=form.username.data, email=form.email.data)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
