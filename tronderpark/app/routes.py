@@ -38,7 +38,6 @@ def register():
         user = user1(username=form.username.data, email=form.email.data, password=form.password.data)
         db.session.add(user)
         db.session.commit()
-        flash('Velkommen til verdens beste web-applikasjon!')
         return redirect(url_for('.login'))
     return render_template('register.html', title='Register', form=form)
 
